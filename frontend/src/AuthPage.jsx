@@ -1,12 +1,14 @@
 import React from 'react'
+import axios from 'axios'
 
 export const AuthPage = (props) => {
     const onSubmit =(e)=>{
         e.preventDefault()
         console.log(e)
-        const {data} = e.target[0]
-        console.log('Form submitted with data:', data);
-        props.onAuth({username: data, secret: data})
+        const {value} = e.target[0]
+        axios.post('http://localhost:3000/authenticate',{username: value})
+        .then(r=>props.onAuth({...r.data, secret: value}))
+        .catch(e=>console.log(e))
     }
   return (
     <div className='background'>
