@@ -6,7 +6,7 @@ export const AuthPage = (props) => {
         e.preventDefault()
         console.log(e)
         const {value} = e.target[0]
-        axios.post('https://localhost:3000/authenticate',{username: value})
+        axios.post('https://realtime-chat-hrxj.onrender.com',{username: value})
         .then(r=>props.onAuth({...r.data, secret: value}))
         .catch(e=>console.log(e))
     }
