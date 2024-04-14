@@ -1,4 +1,3 @@
-import React from 'react'
 import { PrettyChatWindow } from 'react-chat-engine-pretty';
 
 export const ChatsPage = (props) => {
