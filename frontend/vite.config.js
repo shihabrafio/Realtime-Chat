@@ -7,6 +7,6 @@ export default defineConfig({
   base:"https://realtime-chat-frontend-2ync.onrender.com/",
   plugins: [react(),],
   build: {
-    target: 'modules',
+    commonjsOptions: { transformMixedEsModules: true }, // Change
   },
 })
