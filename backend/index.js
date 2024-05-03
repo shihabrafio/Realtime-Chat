@@ -12,7 +12,7 @@ app.post("/authenticate",async (req,res)=>{
             'https://api.chatengine.io/users/',
             {username: username, secret: username, first_name: username},
             {headers: { 
-                'Private-Key': 'e1e36f76-0953-4b73-a15f-b5b7c64e3ba5'
+                'Private-Key': '844ffaeb-142b-4ff7-965f-187188a85324'
               }}
         )
         return res.status(r.status).json(r.data)
